@@ -1,0 +1,6 @@
+gcc -M -MG main.c tri.c ticker.c render.c > deps.inc
+cc `pkg-config --cflags sdl` -O3 -Werror   -c -o main.o main.c
+cc `pkg-config --cflags sdl` -O3 -Werror   -c -o tri.o tri.c
+cc `pkg-config --cflags sdl` -O3 -Werror   -c -o render.o render.c
+cc `pkg-config --cflags sdl` -O3 -Werror -o main main.o tri.o render.o `pkg-config --libs   sdl` -lm   
+./main
