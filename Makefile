@@ -1,6 +1,6 @@
 
 LIBS   := `pkg-config --libs   sdl` -lm   
-CFLAGS := `pkg-config --cflags sdl` -O3 -Werror
+CFLAGS := `pkg-config --cflags sdl` -O3 -fopenmp -Werror
 
 
 
